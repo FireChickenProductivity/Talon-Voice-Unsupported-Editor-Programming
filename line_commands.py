@@ -11,7 +11,7 @@ line_limit = mod.setting(
 )
 
 clipboard_operation_delay = mod.setting(
-    'unsupported_clipboard_operation_delay',
+    'unsupported_application_programming_clipboard_operation_delay',
     type = int,
     default = 200,
     desc = 'How long the unsupported application programming commands should pause when doing copying and pasting while preserving the clipboard'
