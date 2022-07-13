@@ -49,6 +49,14 @@ drag [line] up: swaps the current line with the one above it.
 
 clone (line or that): duplicates the current line on the next line.
 
+# Settings
+The settings for this project can be adjusted through the settings.talon file.
+
+The user.unsupported_application_programming_line_limit setting determines the line limit described in the line commands section.
+
+The user.unsupported_application_programming_clipboard_operation_delay setting determines how long commands that use the clipboard for copying and pasting but preserve the clipboard's original contents will pause to let the clipboard revert properly in milliseconds. Make this bigger if those commands are not working.
+
+
 # Giving Credit
 This project contains modified and unmodified code from the community repository mentioned above provided under the following license:
 "MIT License
