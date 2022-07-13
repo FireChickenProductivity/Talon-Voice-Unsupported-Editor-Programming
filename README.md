@@ -29,7 +29,7 @@ cut [line] (line number): goes to the specified line and cuts it.
 
 cut (line number) until (line number): selects the specified lines and cuts them.
 
-(paste|replace) (line number) until (line number): selects the specified lines and then pastes.
+(paste or replace) (line number) until (line number): selects the specified lines and then pastes.
   
 tab that: attempts to indent the current line by going to the start of it and pressing tab.
 
