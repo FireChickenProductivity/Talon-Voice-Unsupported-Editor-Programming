@@ -26,6 +26,13 @@ select (line number): goes to the specified line and selects it.
 
 select (line number) until (line number): selects the lines in the specified range.
 
+cut [line] (line number): goes to the specified line and cuts it.
+
+cut (line number) until (line number): selects the specified lines and cuts them.
+
+(paste|replace) (line number) until (line number): selects the specified lines and then pastes.
+  
+
 
 
 
