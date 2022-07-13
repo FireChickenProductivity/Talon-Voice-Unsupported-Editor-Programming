@@ -84,7 +84,8 @@ cut <number> until <number>:
     user.unsupported_select_lines(number_1, number_2)
     edit.paste()
 
-tab that: key(tab)
+tab that: 
+    user.unsupported_indent_line()
 tab [line] <number>:
     user.unsupported_go_to_line(number)
     key(tab)
