@@ -28,7 +28,7 @@
 
 not tag: user.line_commands
 and tag: /(code|^(user.protobuf|user.go|user.markdown|user.batch)$)/i
-header requires that the regular knausj line commands are not enabled
+#header requires that the regular knausj line commands are not enabled
 #and a tag with the word code in it (case insensitive) or one of the
 #tags for languages that knausj currently supports at the time that this
 #comment was written that do not use any tags with the word code in it
