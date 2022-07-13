@@ -41,12 +41,12 @@ class Actions:
         actions.edit.extend_line_start()
         actions.edit.extend_line_start()
 
+    def unsupported_indent_line():
+        '''Indents the current line'''
+        indent_line()
     def unsupported_indent_lines_in_range(start: int, final: int):
         '''Indents the specified lines in most applications'''
-        def indentation_action():
-            actions.edit.line_start()
-            actions.key('tab')
-        perform_action_at_each_line(start, final, indentation_action)
+        perform_action_at_each_line(start, final, indent_line)
     def unsupported_reduce_indentation_from_line_start():
         '''Reduces the indentation assuming that the cursors at the line's start in most applications'''
         actions.edit.extend_right()
@@ -128,4 +128,8 @@ def get_line():
     return result
 
 def wait_long_enough_to_let_clipboard_revert_properly():
-	actions.sleep(f'{clipboard_operation_delay.get()}ms')
+    actions.sleep(f'{clipboard_operation_delay.get()}ms')
+
+def indent_line():
+    actions.edit.line_start()
+    actions.key('tab')
