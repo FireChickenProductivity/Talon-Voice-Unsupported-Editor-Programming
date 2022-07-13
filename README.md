@@ -2,7 +2,6 @@
 The project contains Talon commands for working with editors that do not support programming or you do not have specific configuration for. The code assumes that you have the Talon community repository commands/configuration installed: (https://github.com/knausj85/knausj_talon).
 
 # Line Commands
-Please note that the line commands documentation is incomplete.
 
 The line commands require that the community repository tag user.line_commands is not active (to avoid overwriting the community repository line commands when they are available). They also require that a tag with the word code in it is active or one of several community repository programming tags supported by this project. At the time of writing this documentation, one should be able to activate these line commands in an application without the community repository line commands tag by using the community of repository force language command with any of its supported languages.
 
@@ -32,9 +31,23 @@ cut (line number) until (line number): selects the specified lines and cuts them
 
 (paste|replace) (line number) until (line number): selects the specified lines and then pastes.
   
+tab that: attempts to indent the current line by going to the start of it and pressing tab.
 
+tab [line] (line number): goes to the specified line and presses tab to attempt to indent the line.
 
+tab (line number) until (line number): attempts to indent the lines in the specified range by going to each and pressing tab.
 
+retab that: attempts to reduce the current line's indentation by going to the line's start and deleting the first character.
+
+retab [line] (line number): attempts to reduce the specified line's indentation by going to it and using the above process.
+
+retab (line number) until (line number) [(ordinal)]: attempts to reduce the indentation of the lines in the specified range with the indentation reduction process described above. If an ordinal number is given (second, third, fourth...), the command will perform the indentation reduction action the specified number of times.
+
+drag [line] down: swaps the current line with the one below it.
+
+drag [line] up: swaps the current line with the one above it.
+
+clone (line or that): duplicates the current line on the next line.
 
 # Giving Credit
 This project contains modified and unmodified code from the community repository mentioned above provided under the following license:
