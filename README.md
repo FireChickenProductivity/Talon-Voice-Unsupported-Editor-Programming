@@ -1,7 +1,9 @@
 # Talon-Voice-Unsupported-Editor-Programming
 The project contains Talon commands for working with editors that do not support programming or you do not have specific configuration for. The code assumes that you have the Talon community repository commands/configuration installed: (https://github.com/knausj85/knausj_talon).
 
-This project contains modified and unmodified code from said community repository provided under the following license:
+
+
+This project contains modified and unmodified code from the community repository mentioned above provided under the following license:
 "MIT License
 
 Copyright (c) 2021 Jeff Knaus, Ryan Hileman, Zach Dwiel, Michael Arntzenius, and others
