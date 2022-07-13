@@ -2,7 +2,7 @@
 The project contains Talon commands for working with editors that do not support programming or you do not have specific configuration for. The code assumes that you have the Talon community repository commands/configuration installed: (https://github.com/knausj85/knausj_talon).
 
 # Line Commands
-Please note that the line commands documentation is in complete.
+Please note that the line commands documentation is incomplete.
 
 The line commands require that the community repository tag user.line_commands is not active (to avoid overwriting the community repository line commands when they are available). They also require that a tag with the word code in it is active or one of several community repository programming tags supported by this project. At the time of writing this documentation, one should be able to activate these line commands in an application without the community repository line commands tag by using the community of repository force language command with any of its supported languages.
 
