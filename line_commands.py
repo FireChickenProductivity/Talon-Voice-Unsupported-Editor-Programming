@@ -1,17 +1,21 @@
-from talon import Module, actions, clip
+from talon import Module, actions, clip, settings
 
 
 mod = Module()
 
-line_limit = mod.setting(
-    'unsupported_application_programming_line_limit',
+line_limit_setting_name = 'unsupported_application_programming_line_limit'
+line_limit = 'user.' + line_limit_setting_name
+mod.setting(
+    line_limit_setting_name,
     type = int,
     default = 1000,
     desc = 'The limit of how far the line jumping feature is willing to jump. Prevents the commands from accidentally taking an extremely long time due to accidentally dictating a gigantic number'
 )
 
-clipboard_operation_delay = mod.setting(
-    'unsupported_application_programming_clipboard_operation_delay',
+clipboard_operation_delay_setting_name = 'unsupported_application_programming_clipboard_operation_delay'
+clipboard_operation_delay = 'user.' + clipboard_operation_delay_setting_name
+mod.setting(
+    clipboard_operation_delay_setting_name,
     type = int,
     default = 200,
     desc = 'How long the unsupported application programming commands should pause when doing copying and pasting while preserving the clipboard'
@@ -92,7 +96,7 @@ class Actions:
     
 
 def line_number_below_limit(number):
-    return number <= line_limit.get()
+    return number <= settings.get(line_limit)
 
 def start_line_below():
     actions.edit.line_end()
@@ -128,7 +132,7 @@ def get_line():
     return result
 
 def wait_long_enough_to_let_clipboard_revert_properly():
-    actions.sleep(f'{clipboard_operation_delay.get()}ms')
+    actions.sleep(f'{settings.get(clipboard_operation_delay)}ms')
 
 def indent_line():
     actions.edit.line_start()
